@@ -3,7 +3,11 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in capistrano.gemspec
 gemspec
 
-gem 'vagrant', github: 'mitchellh/vagrant', group: :development
+group :cucumber do
+  gem 'vagrant', github: 'mitchellh/vagrant'
+  gem 'kuroko'
+  gem 'cucumber'
+end
 
 platforms :rbx do
   gem 'rubysl', '~> 2.0'
